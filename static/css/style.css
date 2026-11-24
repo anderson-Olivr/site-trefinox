@@ -1,0 +1,692 @@
+/* ==========================================================
+   TREFINOX — style.css
+   Paleta: azul #002B9A / azul escuro #001D6E / verde #4CAF50 / laranja #F57C00
+   ========================================================== */
+
+:root {
+  --blue: #002b9a;
+  --blue-dark: #001d6e;
+  --blue-soft: #4f74d9;
+  --blue-pale: #a9bdf0;
+  --green: #4caf50;
+  --orange: #f57c00;
+  --orange-deep: #e65100;
+}
+
+/* ---------- Base ---------- */
+body {
+  font-family: "Inter", sans-serif;
+  color: #333333;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6,
+.font-heading {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ---------- Hero ---------- */
+.hero-bg {
+  background:
+    linear-gradient(135deg, rgba(2, 6, 23, 0.85) 0%, rgba(0, 43, 154, 0.75) 100%),
+    url("../../img/back-ground.jpg")
+      center / cover no-repeat;
+}
+
+/* ---------- Botões ---------- */
+.btn-green {
+  background-color: var(--green);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(76, 175, 80, 0.35);
+}
+.btn-green:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.45);
+}
+
+.btn-orange {
+  background-color: var(--orange);
+  color: #ffffff;
+  font-weight: 700;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(245, 124, 0, 0.35);
+}
+.btn-orange:hover {
+  background-color: #e66f00;
+  transform: translateY(-2px);
+}
+
+/* ---------- Carrossel de depoimentos ---------- */
+.dot-indicator {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #cbd5e1;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.dot-indicator.active {
+  background-color: var(--blue);
+  width: 28px;
+  border-radius: 6px;
+}
+
+/* ==========================================================
+   LOGO (marcações para você substituir pela imagem)
+   ========================================================== */
+.logo-slot {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  height: 48px;
+  padding: 0 14px;
+  border: 2px dashed var(--blue);
+  border-radius: 8px;
+  color: var(--blue);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-align: center;
+  line-height: 1.1;
+}
+.logo-slot--light {
+  border-color: rgba(255, 255, 255, 0.6);
+  color: #ffffff;
+}
+
+/* ==========================================================
+   NAV — efeitos atrás de cada botão (Home, Quem somos, Produtos, Contato)
+   ========================================================== */
+.nav-fx {
+  position: relative;
+  display: inline-block;
+}
+
+.nav-btn {
+  position: relative;
+  z-index: 2; /* fica na frente dos elementos que sobem */
+  display: block;
+  padding: 8px 18px;
+  background: #ffffff;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 10px;
+  color: #334155;
+  transition: color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.nav-btn.is-active {
+  color: var(--blue);
+  border-color: var(--blue);
+}
+.nav-fx:hover .nav-btn,
+.nav-btn:focus-visible {
+  color: var(--blue);
+  border-color: var(--blue);
+  box-shadow: 0 6px 14px rgba(0, 43, 154, 0.12);
+}
+
+/* "janela" que recorta: só aparece a parte que sai por cima do botão */
+.fx-window {
+  position: absolute;
+  z-index: 1;
+  left: -6px;
+  right: -6px;
+  top: -46px;
+  bottom: 50%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.fx-window--wide {
+  left: -14px;
+  right: -14px;
+  top: -70px;
+}
+
+/* ---------- PRODUTOS: tubos de inox ---------- */
+.tube {
+  position: absolute;
+  bottom: 0;
+  width: var(--w);
+  height: var(--h);
+  left: var(--x);
+  border-radius: 2px;
+  background: linear-gradient(90deg, #7b828b 0%, #c9ced6 18%, #ffffff 38%, #dfe3e8 55%, #9aa1ab 80%, #6f767f 100%);
+  box-shadow: 0 0 0 0.5px rgba(71, 85, 105, 0.45);
+  transform-origin: 50% 100%;
+  transform: translateY(105%) rotate(var(--r));
+  transition: transform 0.3s ease-in;
+}
+.tube::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  border-radius: 50%;
+  background: radial-gradient(ellipse at center, #2b3038 38%, #b9bfc8 42%, #eef0f3 100%);
+}
+.nav-fx:hover .tube {
+  transform: translateY(0) rotate(var(--r));
+  transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d);
+}
+.tube.t1 { --x: 8%;  --w: 7px;  --h: 34px; --r: -7deg; --d: 0.05s; }
+.tube.t2 { --x: 26%; --w: 9px;  --h: 44px; --r: -2deg; --d: 0s; }
+.tube.t3 { --x: 45%; --w: 6px;  --h: 30px; --r: 3deg;  --d: 0.1s; }
+.tube.t4 { --x: 62%; --w: 10px; --h: 40px; --r: 6deg;  --d: 0.03s; }
+.tube.t5 { --x: 82%; --w: 7px;  --h: 32px; --r: 9deg;  --d: 0.08s; }
+
+/* ---------- QUEM SOMOS e CONTATO: ícones flutuantes ---------- */
+.fx-chip {
+  position: absolute;
+  bottom: 0;
+  left: var(--x);
+  width: 26px;
+  height: 26px;
+  transform: translateY(105%);
+  transition: transform 0.3s ease-in;
+}
+.nav-fx:hover .fx-chip {
+  transform: translateY(var(--lift));
+  transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1) var(--d);
+}
+.fx-chip > span {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 10px;
+  box-shadow: 0 3px 8px rgba(0, 29, 110, 0.3);
+}
+.fx-chip > span i { font-size: 12px; }
+.nav-fx:hover .fx-chip > span {
+  animation: fx-float 1.8s ease-in-out var(--fd, 0s) infinite;
+}
+@keyframes fx-float {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-4px); }
+}
+
+/* ---------- HOME: fábrica com fumaça ---------- */
+.fx-factory {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 42px;
+  height: 32px;
+  margin-left: -21px;
+  transform: translateY(105%);
+  transition: transform 0.3s ease-in;
+}
+.nav-fx:hover .fx-factory {
+  transform: translateY(-8px);
+  transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.fx-factory svg { display: block; width: 100%; height: 100%; }
+.puff {
+  position: absolute;
+  left: 29px;
+  top: -1px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  opacity: 0;
+}
+.nav-fx:hover .puff { animation: fx-puff 1.8s ease-out infinite; }
+.puff.p2 { animation-delay: 0.6s !important; }
+.puff.p3 { animation-delay: 1.2s !important; }
+@keyframes fx-puff {
+  0%   { opacity: 0; transform: translate(0, 0) scale(0.5); }
+  20%  { opacity: 0.9; }
+  100% { opacity: 0; transform: translate(8px, -26px) scale(1.7); }
+}
+
+/* ==========================================================
+   CARDS DE PRODUTO — estilo brutalista (azul industrial)
+   ========================================================== */
+.brutal-wrap {
+  position: relative;
+  height: 360px;       /* reserva o espaço do card expandido */
+  padding-top: 30px;   /* espaço para o texto "type-accent" */
+}
+
+.brutalist-container {
+  position: relative;
+  isolation: isolate;  /* faz o z-index:-1 das lajes ficar atrás do card, mas à frente do fundo da seção */
+  width: 100%;
+  max-width: 300px;
+  height: 110px;
+  margin: 0 auto;
+  cursor: pointer;
+  transition: height 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.brutalist-container:hover,
+.brutalist-container:focus-within {
+  height: 300px;
+}
+
+.concrete-block {
+  position: absolute;
+  inset: 0;
+  background: var(--blue-dark);
+  border: 4px solid var(--blue);
+  overflow: hidden;
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.brutalist-container:hover .concrete-block,
+.brutalist-container:focus-within .concrete-block {
+  box-shadow:
+    8px 8px 0 var(--blue),
+    16px 16px 0 var(--blue-soft),
+    24px 24px 0 var(--blue-pale);
+}
+
+.concrete-texture {
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(45deg, #001d6e 0px, #001d6e 2px, #00247f 2px, #00247f 4px),
+    repeating-linear-gradient(-45deg, transparent 0px, transparent 8px, rgba(255, 255, 255, 0.06) 8px, rgba(255, 255, 255, 0.06) 10px);
+  opacity: 0.6;
+}
+
+.paper-texture {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 20% 50%, transparent 20%, rgba(255, 255, 255, 0.06) 21%, rgba(255, 255, 255, 0.06) 34%, transparent 35%, transparent),
+    linear-gradient(0deg, transparent 24%, rgba(255, 255, 255, 0.05) 25%, rgba(255, 255, 255, 0.05) 26%, transparent 27%, transparent 74%, rgba(255, 255, 255, 0.05) 75%, rgba(255, 255, 255, 0.05) 76%, transparent 77%, transparent);
+}
+
+.main-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* título (estado recolhido) */
+.title-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 0 14px;
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 17px;
+  line-height: 1.25;
+  letter-spacing: 1.5px;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 0 var(--blue), 3px 3px 0 var(--orange-deep);
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.title-text i {
+  font-size: 22px;
+  color: var(--orange);
+  text-shadow: none;
+}
+.brutalist-container:hover .title-text,
+.brutalist-container:focus-within .title-text {
+  opacity: 0;
+  transform: translateY(-40px) rotateX(90deg) scale(0.3);
+  filter: blur(8px);
+}
+
+/* lista informativa (estado expandido) — texto centralizado, sem checkbox */
+.info-grid {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-rows: repeat(6, 1fr);
+  padding: 18px 20px 12px;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-1px) rotateX(-100deg) scale(1.3);
+  transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.brutalist-container:hover .info-grid,
+.brutalist-container:focus-within .info-grid {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0) rotateX(0deg) scale(1);
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #eef2ff;
+  font-size: 13px;
+  line-height: 1.25;
+  letter-spacing: 0.4px;
+  border-bottom: 1px solid rgba(169, 189, 240, 0.25);
+}
+.info-item:last-child { border-bottom: 0; }
+
+.info-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--orange);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: gap 0.25s ease, color 0.25s ease;
+}
+.info-cta:hover,
+.info-cta:focus-visible {
+  gap: 12px;
+  color: #ffb259;
+}
+
+/* lajes ao fundo */
+.slab-bg {
+  position: absolute;
+  z-index: -1;
+  background: transparent;
+  border: 3px solid rgba(0, 43, 154, 0.45);
+  transition: all 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.slab-1 { top: 18px; left: 18px; right: 18px; height: 74px; }
+.slab-2 { top: 36px; left: 36px; right: 36px; height: 38px; }
+
+.brutalist-container:hover .slab-1,
+.brutalist-container:focus-within .slab-1 {
+  height: 144px;
+  transform: translate(20px, 20px) rotate(1deg);
+}
+.brutalist-container:hover .slab-2,
+.brutalist-container:focus-within .slab-2 {
+  height: 108px;
+  transform: translate(-10px, 30px) rotate(-1deg);
+}
+
+/* cantoneiras */
+.corner-bracket {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 4px solid var(--blue-dark);
+  background: var(--orange);
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.bracket-tl { top: -10px; left: -10px; border-right: none; border-bottom: none; }
+.bracket-tr { top: -10px; right: -10px; border-left: none; border-bottom: none; }
+.bracket-bl { bottom: -10px; left: -10px; border-right: none; border-top: none; }
+.bracket-br { bottom: -10px; right: -10px; border-left: none; border-top: none; }
+
+.brutalist-container:hover .corner-bracket,
+.brutalist-container:focus-within .corner-bracket {
+  transform: scale(1.5);
+  background: var(--blue-dark);
+  border-color: var(--orange);
+}
+
+/* legenda técnica acima do card */
+.type-accent {
+  position: absolute;
+  top: -26px;
+  left: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: var(--blue);
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+.brutalist-container:hover .type-accent,
+.brutalist-container:focus-within .type-accent {
+  opacity: 1;
+  transform: translateY(5px);
+}
+
+/* rebites */
+.rivet {
+  position: absolute;
+  z-index: 3;
+  width: 8px;
+  height: 8px;
+  background: var(--blue-dark);
+  border: 2px solid var(--blue-soft);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+.rivet-tl { top: 8px; left: 8px; }
+.rivet-tr { top: 8px; right: 8px; }
+.rivet-bl { bottom: 8px; left: 8px; }
+.rivet-br { bottom: 8px; right: 8px; }
+.brutalist-container:hover .rivet,
+.brutalist-container:focus-within .rivet {
+  background: #ffffff;
+  transform: scale(1.5);
+}
+
+/* linha de varredura */
+.scan-effect {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #ffffff, transparent);
+  opacity: 0.8;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.brutalist-container:hover .scan-effect,
+.brutalist-container:focus-within .scan-effect {
+  left: 100%;
+}
+
+/* ==========================================================
+   CARD 3D DE ORÇAMENTO (no lugar do box laranja)
+   ========================================================== */
+.q-parent {
+  width: 320px;
+  height: 340px;
+  perspective: 1000px;
+}
+
+.q-card {
+  position: relative;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #002b9a 0%, #1f6bff 100%);
+  transition: all 0.5s ease-in-out;
+  transform-style: preserve-3d;
+  box-shadow:
+    rgba(0, 29, 110, 0) 40px 50px 25px -40px,
+    rgba(0, 29, 110, 0.35) 0px 25px 25px -5px;
+}
+
+.q-glass {
+  position: absolute;
+  inset: 8px;
+  border-radius: 55px;
+  border-top-right-radius: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.349) 0%, rgba(255, 255, 255, 0.86) 100%);
+  border-left: 1px solid white;
+  border-bottom: 1px solid white;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 25px);
+  transition: all 0.5s ease-in-out;
+}
+
+.q-content {
+  padding: 105px 50px 0 30px;
+  transform: translate3d(0, 0, 26px);
+}
+.q-title {
+  display: block;
+  color: var(--blue);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 22px;
+  line-height: 1.1;
+}
+.q-text {
+  display: block;
+  margin-top: 14px;
+  color: rgba(0, 29, 110, 0.78);
+  font-size: 14px;
+  line-height: 1.45;
+}
+
+.q-bottom {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 12px;
+  transform-style: preserve-3d;
+  transform: translate3d(0, 0, 26px);
+}
+
+.q-social {
+  display: flex;
+  gap: 10px;
+  transform-style: preserve-3d;
+}
+.q-social-btn {
+  width: 34px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  background: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50%;
+  color: var(--blue);
+  font-size: 15px;
+  text-decoration: none;
+  box-shadow: rgba(0, 29, 110, 0.5) 0px 7px 5px -5px;
+}
+.q-social-btn:nth-child(1) { transition: transform 0.2s ease-in-out 0.4s, box-shadow 0.2s ease-in-out 0.4s, background 0.2s, color 0.2s; }
+.q-social-btn:nth-child(2) { transition: transform 0.2s ease-in-out 0.6s, box-shadow 0.2s ease-in-out 0.6s, background 0.2s, color 0.2s; }
+.q-social-btn:nth-child(3) { transition: transform 0.2s ease-in-out 0.8s, box-shadow 0.2s ease-in-out 0.8s, background 0.2s, color 0.2s; }
+
+.q-social-btn:hover { background: var(--blue-dark); color: #ffffff; }
+.q-social-btn.is-whatsapp:hover { background: var(--green); }
+.q-social-btn:active { background: var(--orange); color: #ffffff; }
+
+.q-more {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  width: 42%;
+  color: var(--orange-deep);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 800;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+.q-more:hover { transform: translate3d(0, 0, 10px); }
+.q-more svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 3px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(-90deg);
+}
+
+/* círculos do logo (camadas em profundidade) */
+.q-logo {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform-style: preserve-3d;
+}
+.q-circle {
+  position: absolute;
+  display: block;
+  aspect-ratio: 1;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.16);
+  box-shadow: rgba(0, 20, 80, 0.25) -10px 10px 20px 0px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  transition: all 0.5s ease-in-out;
+}
+.q-circle1 { width: 170px; top: 8px;  right: 8px;  transform: translate3d(0, 0, 20px); }
+.q-circle2 { width: 140px; top: 10px; right: 10px; transform: translate3d(0, 0, 40px); -webkit-backdrop-filter: blur(1px); backdrop-filter: blur(1px); transition-delay: 0.4s; }
+.q-circle3 { width: 110px; top: 17px; right: 17px; transform: translate3d(0, 0, 60px); transition-delay: 0.8s; }
+.q-circle4 { width: 80px;  top: 23px; right: 23px; transform: translate3d(0, 0, 80px); transition-delay: 1.2s; }
+.q-circle5 {
+  width: 50px;
+  top: 30px;
+  right: 30px;
+  display: grid;
+  place-content: center;
+  transform: translate3d(0, 0, 100px);
+  transition-delay: 1.6s;
+}
+.q-circle5 i { color: #ffffff; font-size: 20px; }
+.q-circle5 img { width: 26px; height: auto; }
+
+.q-parent:hover .q-card {
+  transform: rotate3d(1, 1, 0, 30deg);
+  box-shadow:
+    rgba(0, 29, 110, 0.35) 30px 50px 25px -40px,
+    rgba(0, 29, 110, 0.15) 0px 25px 30px 0px;
+}
+.q-parent:hover .q-social-btn {
+  transform: translate3d(0, 0, 50px);
+  box-shadow: rgba(0, 29, 110, 0.25) -5px 20px 10px 0px;
+}
+.q-parent:hover .q-circle2 { transform: translate3d(0, 0, 60px); }
+.q-parent:hover .q-circle3 { transform: translate3d(0, 0, 80px); }
+.q-parent:hover .q-circle4 { transform: translate3d(0, 0, 100px); }
+.q-parent:hover .q-circle5 { transform: translate3d(0, 0, 120px); }
+
+
+/* ---------- Acessibilidade: reduz movimento ---------- */
+@media (prefers-reduced-motion: reduce) {
+  .tube,
+  .nav-fx:hover .tube,
+  .fx-chip,
+  .fx-factory,
+  .brutalist-container,
+  .concrete-block,
+  .info-grid,
+  .title-text,
+  .slab-bg,
+  .scan-effect,
+  .q-card,
+  .q-circle {
+    transition-duration: 0.01ms !important;
+    transition-delay: 0s !important;
+  }
+}

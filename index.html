@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TREFINOX - Fabricante de Tubos, Microtubos e Usinagem de Precisão</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        trefBlue: '#002B9A',
+                        trefDarkBlue: '#001D6E',
+                        trefGreen: '#4CAF50',
+                        trefGreenHover: '#45a049',
+                        trefOrange: '#E65100',
+                        trefOrangeBg: '#F57C00',
+                        trefGrayBg: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <div class="bg-slate-900 text-gray-300 text-xs py-2 border-b border-slate-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-industry text-trefGreen"></i> Especializada em tubos trefilados para linha
+                    médica e automotiva
+                </span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="tel:1431510125" class="hover:text-white transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-blue-400"></i> (14) 3151-0125
+                </a>
+                <a href="mailto:contato@atecmetais.com.br" class="hover:text-white transition flex items-center gap-1">
+                    <i class="fa-solid fa-envelope text-blue-400"></i> contato@atecmetais.com.br
+                </a>
+                <div class="flex items-center gap-3 border-l border-slate-700 pl-4">
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-pink-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="flex items-center gap-2" aria-label="TREFINOX - Início">
+                    <img src="../../img/trefinox-logo.png" alt="TREFINOX" class="h-12 w-auto">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8 font-heading font-semibold text-sm">
+
+                    <!-- HOME: fábrica com fumaça sobe de trás do botão -->
+                    <div class="nav-fx">
+                        <div class="fx-window fx-window--wide" aria-hidden="true">
+                            <div class="fx-factory">
+                                <svg viewBox="0 0 44 34" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="30" y="3" width="8" height="3" fill="#64748b"/>
+                                    <rect x="31" y="5" width="6" height="29" fill="#94a3b8"/>
+                                    <path d="M2 34V14L12 8V14L22 8V14L30 8V34Z" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
+                                    <rect x="6" y="20" width="5" height="5" fill="#F57C00"/>
+                                    <rect x="15" y="20" width="5" height="5" fill="#F57C00"/>
+                                    <rect x="24" y="20" width="4" height="5" fill="#F57C00"/>
+                                </svg>
+                                <span class="puff p1"></span><span class="puff p2"></span><span class="puff p3"></span>
+                            </div>
+                        </div>
+                        <a href="#home" class="nav-btn is-active">Home</a>
+                    </div>
+
+                    <!-- QUEM SOMOS: medalha, +20 anos e aperto de mão (experiência e parceria) -->
+                    <div class="nav-fx">
+                        <div class="fx-window fx-window--wide" aria-hidden="true">
+                            <span class="fx-chip" style="--x:6%;--lift:-14px;--d:0s;--fd:.2s;--bg:#E65100"><span><i class="fa-solid fa-award"></i></span></span>
+                            <span class="fx-chip" style="--x:38%;--lift:-18px;--d:.06s;--fd:.5s;--bg:#002B9A"><span>+20</span></span>
+                            <span class="fx-chip" style="--x:70%;--lift:-13px;--d:.12s;--fd:0s;--bg:#4CAF50"><span><i class="fa-solid fa-handshake"></i></span></span>
+                        </div>
+                        <a href="#quem-somos" class="nav-btn">Quem somos</a>
+                    </div>
+
+                    <div class="nav-fx">
+                        <div class="fx-window" aria-hidden="true">
+                            <span class="tube t1"></span>
+                            <span class="tube t2"></span>
+                            <span class="tube t3"></span>
+                            <span class="tube t4"></span>
+                            <span class="tube t5"></span>
+                        </div>
+                        <a href="produtos.html" class="nav-btn">Produtos</a>
+                    </div>
+
+                    <div class="nav-fx">
+                        <div class="fx-window fx-window--wide" aria-hidden="true">
+                            <span class="fx-chip" style="--x:2%;--lift:-12px;--d:0s;--fd:0s;--bg:#4CAF50"><span><i class="fa-brands fa-whatsapp"></i></span></span>
+                            <span class="fx-chip" style="--x:27%;--lift:-18px;--d:.05s;--fd:.35s;--bg:#002B9A"><span><i class="fa-solid fa-phone"></i></span></span>
+                            <span class="fx-chip" style="--x:52%;--lift:-14px;--d:.1s;--fd:.7s;--bg:#F57C00"><span><i class="fa-solid fa-envelope"></i></span></span>
+                            <span class="fx-chip" style="--x:77%;--lift:-19px;--d:.15s;--fd:1s;--bg:#4f74d9"><span><i class="fa-solid fa-globe"></i></span></span>
+                        </div>
+                        <a href="#contato" class="nav-btn">Contato</a>
+                    </div>
+                </nav>
+
+                <div class="hidden md:flex items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20vim%20do%20site%20da%20TREFINOX,%20e%20gostaria%20de%20maiores%20informações..."
+                        target="_blank"
+                        class="btn-green text-sm px-6 py-3 rounded-full flex items-center gap-2 uppercase tracking-wide">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> FALE CONOSCO
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-trefBlue focus:outline-none p-2"
+                        aria-label="Abrir menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="#home" class="block font-semibold text-trefBlue py-2">Home</a>
+            <a href="#quem-somos" class="block font-medium text-slate-700 hover:text-trefBlue py-2">Quem somos</a>
+            <a href="produtos.html" class="block font-medium text-slate-700 hover:text-trefBlue py-2">Produtos</a>
+            <a href="#contato" class="block font-medium text-slate-700 hover:text-trefBlue py-2">Contato</a>
+            <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20vim%20do%20site%20da%20TREFINOX,%20e%20gostaria%20de%20maiores%20informações..."
+                target="_blank"
+                class="btn-green w-full text-center py-3 rounded-lg flex items-center justify-center gap-2 font-semibold">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <section id="home" class="hero-bg text-white py-24 lg:py-32 relative">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center md:text-left">
+            <div class="max-w-3xl">
+                <span
+                    class="bg-blue-600/40 text-blue-200 uppercase tracking-widest text-xs font-semibold px-3 py-1.5 rounded-full border border-blue-400/30 inline-block mb-4">
+                    Fabricação de Artefatos de Metais
+                </span>
+                <h1 class="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-heading leading-tight mb-6">
+                    Projetos em aço inoxidável com usinagem de precisão e qualidade.
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-200 mb-8 font-light leading-relaxed">
+                    Oferecemos tubos trefilados personalizados e microtubos sob medida para o seu negócio.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX" target="_blank"
+                        class="btn-orange px-8 py-4 rounded-full text-center text-sm font-bold uppercase tracking-wider flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-calculator"></i> SOLICITE UM ORÇAMENTO
+                    </a>
+                    <a href="produtos.html"
+                        class="border-2 border-white/80 hover:bg-white hover:text-slate-900 px-8 py-4 rounded-full text-center text-sm font-semibold transition flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-list-check"></i> Ver Produtos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="produtos" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- SECTION TITLE -->
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-trefOrange font-bold text-sm uppercase tracking-wider">Especialidades</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-2 mb-4">
+                    TREFINOX: Fabricante de Tubos e Microtubos no Brasil
+                </h2>
+                <div class="w-20 h-1 bg-trefBlue mx-auto rounded-full mb-4"></div>
+                <p class="text-slate-600">
+                    A Melhor Empresa Especializada na Fabricação de Tubos Trefilados e Microtubos de Inox
+                </p>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-2">
+
+                <div class="brutal-wrap">
+                    <div class="brutalist-container" tabindex="0">
+                        <div class="slab-bg slab-1"></div>
+                        <div class="slab-bg slab-2"></div>
+
+                        <div class="concrete-block">
+                            <div class="concrete-texture"></div>
+                            <div class="paper-texture"></div>
+
+                            <div class="main-content">
+                                <div class="title-text">
+                                    <i class="fa-solid fa-microscope"></i>
+                                    Microtubos de Aço Inoxidável
+                                </div>
+
+                                <div class="info-grid">
+                                    <div class="info-item">Altíssima precisão dimensional</div>
+                                    <div class="info-item">Tubos capilares de inox</div>
+                                    <div class="info-item">Rígida tolerância dimensional</div>
+                                    <div class="info-item">Linha médica e automotiva</div>
+                                    <div class="info-item">Fabricação sob medida</div>
+                                    <div class="info-item"><a class="info-cta" href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX" target="_blank">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+
+                            <div class="scan-effect"></div>
+                            <div class="rivet rivet-tl"></div>
+                            <div class="rivet rivet-tr"></div>
+                            <div class="rivet rivet-bl"></div>
+                            <div class="rivet rivet-br"></div>
+                        </div>
+
+                        <div class="type-accent">TREFINOX // MICROTUBOS</div>
+
+                        <div class="corner-bracket bracket-tl"></div>
+                        <div class="corner-bracket bracket-tr"></div>
+                        <div class="corner-bracket bracket-bl"></div>
+                        <div class="corner-bracket bracket-br"></div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="brutal-wrap">
+                    <div class="brutalist-container" tabindex="0">
+                        <div class="slab-bg slab-1"></div>
+                        <div class="slab-bg slab-2"></div>
+
+                        <div class="concrete-block">
+                            <div class="concrete-texture"></div>
+                            <div class="paper-texture"></div>
+
+                            <div class="main-content">
+                                <div class="title-text">
+                                    <i class="fa-solid fa-bars-staggered"></i>
+                                    Tubos Trefilados em Barra
+                                </div>
+
+                                <div class="info-grid">
+                                    <div class="info-item">Alta durabilidade</div>
+                                    <div class="info-item">Aplicações industriais</div>
+                                    <div class="info-item">Aplicações mecânicas</div>
+                                    <div class="info-item">Inox e metais não ferrosos</div>
+                                    <div class="info-item">Comprimentos sob medida</div>
+                                    <div class="info-item"><a class="info-cta" href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX" target="_blank">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+
+                            <div class="scan-effect"></div>
+                            <div class="rivet rivet-tl"></div>
+                            <div class="rivet rivet-tr"></div>
+                            <div class="rivet rivet-bl"></div>
+                            <div class="rivet rivet-br"></div>
+                        </div>
+
+                        <div class="type-accent">TREFINOX // TUBOS EM BARRA</div>
+
+                        <div class="corner-bracket bracket-tl"></div>
+                        <div class="corner-bracket bracket-tr"></div>
+                        <div class="corner-bracket bracket-bl"></div>
+                        <div class="corner-bracket bracket-br"></div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="brutal-wrap">
+                    <div class="brutalist-container" tabindex="0">
+                        <div class="slab-bg slab-1"></div>
+                        <div class="slab-bg slab-2"></div>
+
+                        <div class="concrete-block">
+                            <div class="concrete-texture"></div>
+                            <div class="paper-texture"></div>
+
+                            <div class="main-content">
+                                <div class="title-text">
+                                    <i class="fa-solid fa-circle-notch"></i>
+                                    Tubos Trefilados em Rolo
+                                </div>
+
+                                <div class="info-grid">
+                                    <div class="info-item">Eficiência energética</div>
+                                    <div class="info-item">Troca térmica</div>
+                                    <div class="info-item">Sistemas de refrigeração</div>
+                                    <div class="info-item">Sistemas de aquecimento</div>
+                                    <div class="info-item">Fornecido em rolo</div>
+                                    <div class="info-item"><a class="info-cta" href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX" target="_blank">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+
+                            <div class="scan-effect"></div>
+                            <div class="rivet rivet-tl"></div>
+                            <div class="rivet rivet-tr"></div>
+                            <div class="rivet rivet-bl"></div>
+                            <div class="rivet rivet-br"></div>
+                        </div>
+
+                        <div class="type-accent">TREFINOX // TUBOS EM ROLO</div>
+
+                        <div class="corner-bracket bracket-tl"></div>
+                        <div class="corner-bracket bracket-tr"></div>
+                        <div class="corner-bracket bracket-bl"></div>
+                        <div class="corner-bracket bracket-br"></div>
+                    </div>
+                </div>
+
+                <!-- CARD 4 -->
+                <div class="brutal-wrap">
+                    <div class="brutalist-container" tabindex="0">
+                        <div class="slab-bg slab-1"></div>
+                        <div class="slab-bg slab-2"></div>
+
+                        <div class="concrete-block">
+                            <div class="concrete-texture"></div>
+                            <div class="paper-texture"></div>
+
+                            <div class="main-content">
+                                <div class="title-text">
+                                    <i class="fa-solid fa-gears"></i>
+                                    Desenvolvimento de Peças
+                                </div>
+
+                                <div class="info-grid">
+                                    <div class="info-item">Desenvolvimento de peças</div>
+                                    <div class="info-item">Curvatura de tubos</div>
+                                    <div class="info-item">Estampagem</div>
+                                    <div class="info-item">Usinagem de precisão</div>
+                                    <div class="info-item">Peças tubulares customizadas</div>
+                                    <div class="info-item"><a class="info-cta" href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX" target="_blank">Solicitar orçamento <i class="fa-solid fa-arrow-right"></i></a></div>
+                                </div>
+                            </div>
+
+                            <div class="scan-effect"></div>
+                            <div class="rivet rivet-tl"></div>
+                            <div class="rivet rivet-tr"></div>
+                            <div class="rivet rivet-bl"></div>
+                            <div class="rivet rivet-br"></div>
+                        </div>
+
+                        <div class="type-accent">TREFINOX // PEÇAS TUBULARES</div>
+
+                        <div class="corner-bracket bracket-tl"></div>
+                        <div class="corner-bracket bracket-tr"></div>
+                        <div class="corner-bracket bracket-bl"></div>
+                        <div class="corner-bracket bracket-br"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-8">
+                <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20gostaria%20de%20conhecer%20mais%20sobre%20os%20Tubos%20Trefilados%20da%20TREFINOX"
+                    target="_blank"
+                    class="btn-green inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold uppercase text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Conheça nossos Tubos Trefilados
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="quem-somos" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+
+                <div class="lg:col-span-7">
+                    <span class="text-trefOrange font-bold text-sm uppercase tracking-wider">Quem somos</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-2 mb-6 leading-tight">
+                        Bem-vindo à TREFINOX: TUBOS e MICROTUBOS de aço inox e metais não ferrosos.
+                    </h2>
+                    <div class="space-y-4 text-slate-600 leading-relaxed text-base">
+                        <p>
+                            Na <strong class="text-slate-800">TREFINOX</strong>, somos especialistas em
+                            <strong>soluções personalizadas em tubos e microtubos de aço inoxidável e metais não
+                                ferrosos (latão, cobre, alumínio e tomback)</strong> atendendo com excelência desde
+                            pequenas demandas até grandes projetos industriais.
+                        </p>
+                        <p>
+                            Com <strong>mais de 20 anos de experiência</strong>, destacamo-nos como líderes na
+                            <strong>fabricação de microtubos inoxidáveis e peças tubulares</strong> com rígido padrão de
+                            tolerância dimensional.
+                        </p>
+                        <p class="font-semibold text-trefBlue text-lg pt-2">
+                            <i class="fa-solid fa-circle-check text-trefGreen mr-2"></i> Especialidades em Microtubos e
+                            Tubos Capilares de inox para todos os setores.
+                        </p>
+                    </div>
+                    <div class="mt-8">
+                        <a href="#contato"
+                            class="btn-green inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold uppercase">
+                            Conheça nossa empresa
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="q-parent">
+                        <div class="q-card">
+                            <div class="q-logo">
+                                <span class="q-circle q-circle1"></span>
+                                <span class="q-circle q-circle2"></span>
+                                <span class="q-circle q-circle3"></span>
+                                <span class="q-circle q-circle4"></span>
+                                <span class="q-circle q-circle5">
+                                    <img src="../../img/trefinox-logo-w.png" alt="TREFINOX">
+                                </span>
+                            </div>
+
+                            <div class="q-glass"></div>
+
+                            <div class="q-content">
+                                <span class="q-title">SOLICITE UM ORÇAMENTO</span>
+                                <span class="q-text">Fale com um especialista da TREFINOX e receba uma proposta sob medida.</span>
+                            </div>
+
+                            <div class="q-bottom">
+                                <div class="q-social">
+                                    <a class="q-social-btn is-whatsapp" href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX"
+                                        target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                                    <a class="q-social-btn" href="mailto:contato@atecmetais.com.br?subject=Solicita%C3%A7%C3%A3o%20de%20or%C3%A7amento"
+                                        aria-label="E-mail"><i class="fa-solid fa-envelope"></i></a>
+                                    <a class="q-social-btn" href="tel:1431510125" aria-label="Telefone"><i
+                                            class="fa-solid fa-phone"></i></a>
+                                </div>
+                                <a class="q-more" href="https://api.whatsapp.com/send?phone=5511958820100&text=Ol%C3%A1,%20gostaria%20de%20solicitar%20um%20or%C3%A7amento%20com%20um%20especialista%20da%20TREFINOX" target="_blank">
+                                    Orçar agora
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-trefBlue text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-8">
+
+                <div class="flex items-center gap-6">
+                    <div class="border-r border-blue-400/40 pr-6 hidden sm:block">
+                        <img src="../../img/trefinox-logo-w.png" alt="TREFINOX">
+                    </div>
+                    <div>
+                        <h3 class="text-xl sm:text-2xl font-bold font-heading leading-tight">
+                            +20 Anos Fabricando Tubos, Microtubos e Peças Tubulares em Aço Inox e Metais Não-Ferrosos:
+                            Qualidade e Excelência.
+                        </h3>
+                        <p class="text-blue-200 text-sm mt-1">Agora nós contamos com mais este recurso, marque uma
+                            reunião pelo Whatsapp.</p>
+                    </div>
+                </div>
+
+                <div class="shrink-0 w-full lg:w-auto text-center">
+                    <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20gostaria%20de%20marcar%20uma%20reunião%20via%20Whatsapp"
+                        target="_blank"
+                        class="btn-green inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full font-bold uppercase text-sm w-full sm:w-auto">
+                        <i class="fa-brands fa-whatsapp text-xl"></i> Fale conosco pelo WhatsApp
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+            <span class="text-trefOrange font-bold text-sm uppercase tracking-wider">Destaque</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-2 mb-2">
+                TREFINOX em Destaque: Peças Tubulares
+            </h2>
+            <p class="text-slate-600 mb-12">
+                Fabricante de Peças Tubulares em Aço Inox: Compromisso com a Inovação e a Qualidade
+            </p>
+
+            <!-- GALLERY GRID -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 overflow-hidden group">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1581092335397-9583fe92d232?auto=format&fit=crop&w=600&q=80"
+                            alt="Microtubos Cortados TREFINOX"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-trefBlue/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-semibold text-xs p-2 text-center">
+                            Microtubos de Precisão
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 overflow-hidden group">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1504917599217-d4dc5ebe6122?auto=format&fit=crop&w=600&q=80"
+                            alt="Curvatura de Tubos Inox TREFINOX"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-trefBlue/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-semibold text-xs p-2 text-center">
+                            Curvatura & Conformação
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 overflow-hidden group">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
+                            alt="Serpentinas e Rolo de Inox TREFINOX"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-trefBlue/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-semibold text-xs p-2 text-center">
+                            Serpentinas de Troca Térmica
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-200 overflow-hidden group">
+                    <div class="aspect-square rounded-xl overflow-hidden bg-slate-100 relative">
+                        <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc?auto=format&fit=crop&w=600&q=80"
+                            alt="Montagens Tubulares TREFINOX"
+                            class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div
+                            class="absolute inset-0 bg-trefBlue/40 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white font-semibold text-xs p-2 text-center">
+                            Peças Usinadas sob Medida
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+                <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20gostaria%20de%20falar%20com%20a%20TREFINOX%20agora"
+                    target="_blank"
+                    class="btn-green inline-flex items-center gap-2 px-8 py-4 rounded-full font-bold uppercase text-sm">
+                    <i class="fa-brands fa-whatsapp text-lg"></i> Fale Conosco Agora
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <span class="text-trefOrange font-bold text-sm uppercase tracking-wider">Depoimentos</span>
+                <h2 class="text-2xl sm:text-4xl font-extrabold font-heading text-slate-900 mt-2 mb-4 leading-snug">
+                    Depoimentos de nossos clientes satisfeitos em Belo Horizonte, São Paulo, Porto Alegre, Ribeirão
+                    Preto, São Carlos, Curitiba e outras Regiões de Atendimento em todo o Brasil
+                </h2>
+                <p class="text-slate-600 text-sm sm:text-base">
+                    Veja o que nossos clientes dizem sobre as soluções em microtubos de inox e peças tubulares da
+                    TREFINOX.
+                </p>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto">
+
+                <div id="testimonial-container" class="grid md:grid-cols-2 gap-8">
+
+                    <div
+                        class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 italic text-sm leading-relaxed mb-6">
+                                “Estamos muito satisfeitos com a TREFINOX. A qualidade e a durabilidade dos materiais
+                                são excepcionais. O serviço de atendimento ao cliente é atencioso e eficaz, sempre
+                                prontos para atender às nossas necessidades.”
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-200 pt-4">
+                            <h4 class="font-bold font-heading text-slate-900">Fernanda Gomes</h4>
+                            <span class="text-xs text-slate-500">Gerente de Compras</span>
+                        </div>
+                    </div>
+
+                    <div
+                        class="bg-slate-50 p-8 rounded-2xl border border-slate-100 shadow-sm flex flex-col justify-between">
+                        <div>
+                            <div class="flex text-amber-400 mb-4 text-sm">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <p class="text-slate-700 italic text-sm leading-relaxed mb-6">
+                                “Como engenheiro, valorizo fornecedores que entregam o que prometem. A TREFINOX é um
+                                desses raros casos. A precisão dos seus tubos e peças de metal é fundamental para o
+                                sucesso dos meus projetos. Altamente recomendado.”
+                            </p>
+                        </div>
+                        <div class="border-t border-slate-200 pt-4">
+                            <h4 class="font-bold font-heading text-slate-900">Carlos Eduardo Rocha</h4>
+                            <span class="text-xs text-slate-500">Engenheiro Industrial</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="flex justify-center items-center gap-2 mt-10">
+                    <span class="dot-indicator active" onclick="switchTestimonial(0)"></span>
+                    <span class="dot-indicator" onclick="switchTestimonial(1)"></span>
+                    <span class="dot-indicator" onclick="switchTestimonial(2)"></span>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer id="contato" class="bg-trefDarkBlue text-white pt-16 pb-8 border-t border-blue-900">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div>
+                    <div class="mb-6">
+                        <img src="../../img/trefinox-logo-w.png" alt="TREFINOX">
+                    </div>
+                    <h4 class="text-sm font-bold font-heading uppercase text-blue-300 mb-4 tracking-wider">SOBRE</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        TREFINOX especializada na fabricação de tubos, microtubos e peças tubulares de aço inox e
+                        metais não-ferrosos, oferecendo soluções precisas e sob medida com mais de 20 anos de
+                        experiência no mercado.
+                    </p>
+                    <div class="text-slate-300 text-sm">
+                        <p class="font-semibold text-white mb-1">TELEFONE MATRIZ:</p>
+                        <p class="text-lg font-bold text-trefGreen">(14) 3151-0125</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-heading uppercase text-blue-300 mb-6 tracking-wider">ACESSO RÁPIDO
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="#home"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Home</a></li>
+                        <li><a href="#quem-somos"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Quem somos</a></li>
+                        <li><a href="produtos.html"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Produtos</a></li>
+                        <li><a href="#contato"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-sm font-bold font-heading uppercase text-blue-300 mb-6 tracking-wider">NOSSOS
+                        CONTATOS</h4>
+
+                    <div class="grid sm:grid-cols-2 gap-6 text-sm text-slate-300 mb-6">
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-location-dot text-trefGreen text-lg shrink-0 mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Matriz:</strong>
+                                Rua José Jailton dos Santos, 10 Morada do Sol – Anhembi – SP CEP: 18633-046<br>
+                                <span class="text-white font-semibold">Telefone:</span> (14) 3151-0125
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-location-dot text-trefGreen text-lg shrink-0 mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Filial:</strong>
+                                Av. Santa Teresinha, 241 Vila Santa Cecília – Mauá – SP CEP: 09380-060<br>
+                                <span class="text-white font-semibold">Telefone:</span> (11) 4544-7213
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-blue-900/60 pt-6 flex flex-wrap gap-6 text-sm">
+                        <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20gostaria%20de%20maiores%20informações"
+                            target="_blank" class="flex items-center gap-2 text-white hover:text-trefGreen transition">
+                            <i class="fa-brands fa-whatsapp text-trefGreen text-lg"></i> (11) 95882-0100
+                        </a>
+                        <a href="mailto:contato@atecmetais.com.br"
+                            class="flex items-center gap-2 text-white hover:text-blue-300 transition">
+                            <i class="fa-solid fa-envelope text-blue-400 text-lg"></i> contato@atecmetais.com.br
+                        </a>
+                    </div>
+
+                    <div class="mt-6 flex gap-4 text-xs text-slate-400">
+                        <a href="#" class="hover:underline">Política Ambiental</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Política da Qualidade</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="border-t border-blue-900/80 pt-8 text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>Copyright 2026 Todos os direitos reservados – TREFINOX</p>
+                <p class="text-slate-500">Desenvolvido com excelência técnica para TREFINOX</p>
+            </div>
+
+        </div>
+    </footer>
+    
+    <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20vim%20do%20site%20da%20TREFINOX,%20e%20gostaria%20de%20maiores%20informações..."
+        target="_blank" aria-label="Falar pelo WhatsApp"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition duration-300 z-50 text-3xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="static/js/main.js"></script>
+</body>
+
+</html>

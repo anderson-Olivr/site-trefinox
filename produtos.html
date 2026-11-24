@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produtos - TREFINOX | Catálogo de Tubos, Microtubos e Peças</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        trefBlue: '#002B9A',
+                        trefDarkBlue: '#001D6E',
+                        trefGreen: '#4CAF50',
+                        trefGreenHover: '#45a049',
+                        trefOrange: '#E65100',
+                        trefOrangeBg: '#F57C00',
+                        trefGrayBg: '#F8FAFC'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        heading: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/produtos.css">
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <div class="bg-slate-900 text-gray-300 text-xs py-2 border-b border-slate-800">
+        <div
+            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-2">
+            <div class="flex items-center gap-4">
+                <span class="font-medium text-white flex items-center gap-1.5">
+                    <i class="fa-solid fa-industry text-trefGreen"></i> Especializada em tubos trefilados para linha
+                    médica e automotiva
+                </span>
+            </div>
+            <div class="flex items-center gap-6">
+                <a href="tel:1431510125" class="hover:text-white transition flex items-center gap-1">
+                    <i class="fa-solid fa-phone text-blue-400"></i> (14) 3151-0125
+                </a>
+                <a href="mailto:contato@atecmetais.com.br" class="hover:text-white transition flex items-center gap-1">
+                    <i class="fa-solid fa-envelope text-blue-400"></i> contato@atecmetais.com.br
+                </a>
+                <div class="flex items-center gap-3 border-l border-slate-700 pl-4">
+                    <a href="#" class="hover:text-blue-400 transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="hover:text-pink-400 transition"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <header class="bg-white sticky top-0 z-50 shadow-md">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2" aria-label="TREFINOX - Início">
+                    <img src="../../img/trefinox-logo.png" alt="TREFINOX" class="h-12 w-auto">
+                </a>
+
+                <nav class="hidden md:flex items-center space-x-8 font-heading font-semibold text-sm">
+
+                    <div class="nav-fx">
+                        <div class="fx-window fx-window--wide" aria-hidden="true">
+                            <div class="fx-factory">
+                                <svg viewBox="0 0 44 34" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="30" y="3" width="8" height="3" fill="#64748b"/>
+                                    <rect x="31" y="5" width="6" height="29" fill="#94a3b8"/>
+                                    <path d="M2 34V14L12 8V14L22 8V14L30 8V34Z" fill="#cbd5e1" stroke="#64748b" stroke-width="1"/>
+                                    <rect x="6" y="20" width="5" height="5" fill="#F57C00"/>
+                                    <rect x="15" y="20" width="5" height="5" fill="#F57C00"/>
+                                    <rect x="24" y="20" width="4" height="5" fill="#F57C00"/>
+                                </svg>
+                                <span class="puff p1"></span><span class="puff p2"></span><span class="puff p3"></span>
+                            </div>
+                        </div>
+                        <a href="index.html" class="nav-btn">Home</a>
+                    </div>
+
+                    <div class="nav-fx">
+                        <div class="fx-window fx-window--wide" aria-hidden="true">
+                            <span class="fx-chip" style="--x:6%;--lift:-14px;--d:0s;--fd:.2s;--bg:#E65100"><span><i class="fa-solid fa-award"></i></span></span>
+                            <span class="fx-chip" style="--x:38%;--lift:-18px;--d:.06s;--fd:.5s;--bg:#002B9A"><span>+20</span></span>
+                            <span class="fx-chip" style="--x:70%;--lift:-13px;--d:.12s;--fd:0s;--bg:#4CAF50"><span><i class="fa-solid fa-handshake"></i></span></span>
+                        </div>
+                        <a href="index.html#quem-somos" class="nav-btn">Quem somos</a>
+                    </div>
+
+                    <div class="nav-fx">
+                        <div class="fx-window" aria-hidden="true">
+                            <span class="tube t1"></span>
+                            <span class="tube t2"></span>
+                            <span class="tube t3"></span>
+                            <span class="tube t4"></span>
+                            <span class="tube t5"></span>
+                        </div>
+                        <a href="#" class="nav-btn is-active">Produtos</a>
+                    </div>
+
+                    <div class="nav-fx">
+                        <div class="fx-window fx-window--wide" aria-hidden="true">
+                            <span class="fx-chip" style="--x:2%;--lift:-12px;--d:0s;--fd:0s;--bg:#4CAF50"><span><i class="fa-brands fa-whatsapp"></i></span></span>
+                            <span class="fx-chip" style="--x:27%;--lift:-18px;--d:.05s;--fd:.35s;--bg:#002B9A"><span><i class="fa-solid fa-phone"></i></span></span>
+                            <span class="fx-chip" style="--x:52%;--lift:-14px;--d:.1s;--fd:.7s;--bg:#F57C00"><span><i class="fa-solid fa-envelope"></i></span></span>
+                            <span class="fx-chip" style="--x:77%;--lift:-19px;--d:.15s;--fd:1s;--bg:#4f74d9"><span><i class="fa-solid fa-globe"></i></span></span>
+                        </div>
+                        <a href="#contato" class="nav-btn">Contato</a>
+                    </div>
+                </nav>
+
+                <div class="hidden md:flex items-center">
+                    <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20vim%20do%20site%20da%20TREFINOX,%20e%20gostaria%20de%20maiores%20informações..."
+                        target="_blank"
+                        class="btn-green text-sm px-6 py-3 rounded-full flex items-center gap-2 uppercase tracking-wide">
+                        <i class="fa-brands fa-whatsapp text-lg"></i> FALE CONOSCO
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-slate-700 hover:text-trefBlue focus:outline-none p-2"
+                        aria-label="Abrir menu">
+                        <i class="fa-solid fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-3">
+            <a href="index.html" class="block font-medium text-slate-700 hover:text-trefBlue py-2">Home</a>
+            <a href="index.html#quem-somos" class="block font-medium text-slate-700 hover:text-trefBlue py-2">Quem somos</a>
+            <a href="produtos.html" class="block font-semibold text-trefBlue py-2">Produtos</a>
+            <a href="#contato" class="block font-medium text-slate-700 hover:text-trefBlue py-2">Contato</a>
+            <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20vim%20do%20site%20da%20TREFINOX,%20e%20gostaria%20de%20maiores%20informações..."
+                target="_blank"
+                class="btn-green w-full text-center py-3 rounded-lg flex items-center justify-center gap-2 font-semibold">
+                <i class="fa-brands fa-whatsapp text-lg"></i> Fale Conosco
+            </a>
+        </div>
+    </header>
+
+    <main>
+        <section class="catalog-hero">
+            <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav class="text-xs text-blue-200 mb-3" aria-label="breadcrumb">
+                    <a href="index.html" class="hover:text-white transition">Home</a>
+                    <span class="mx-2">/</span>
+                    <span class="text-white font-semibold">Produtos</span>
+                </nav>
+                <h1 class="text-3xl sm:text-5xl font-extrabold font-heading leading-tight">Catálogo de Produtos</h1>
+                <p class="text-slate-200 mt-3 max-w-2xl font-light">
+                    Tubos, microtubos e peças tubulares em aço inox e metais não ferrosos.
+                    Clique em <strong class="font-semibold">Saiba mais</strong> ou <strong class="font-semibold">Estimar orçamento</strong> para virar o card.
+                </p>
+            </div>
+        </section>
+
+        <section class="catalog-section py-14">
+            <div class="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
+                <div id="catalog-grid" class="catalog-grid"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contato" class="bg-trefDarkBlue text-white pt-16 pb-8 border-t border-blue-900">
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+
+                <div>
+                    <div class="mb-6">
+                        <img src="../../img/trefinox-logo-w.png" alt="TREFINOX">
+                    </div>
+                    <h4 class="text-sm font-bold font-heading uppercase text-blue-300 mb-4 tracking-wider">SOBRE</h4>
+                    <p class="text-slate-300 text-sm leading-relaxed mb-6">
+                        TREFINOX especializada na fabricação de tubos, microtubos e peças tubulares de aço inox e
+                        metais não-ferrosos, oferecendo soluções precisas e sob medida com mais de 20 anos de
+                        experiência no mercado.
+                    </p>
+                    <div class="text-slate-300 text-sm">
+                        <p class="font-semibold text-white mb-1">TELEFONE MATRIZ:</p>
+                        <p class="text-lg font-bold text-trefGreen">(14) 3151-0125</p>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-sm font-bold font-heading uppercase text-blue-300 mb-6 tracking-wider">ACESSO RÁPIDO
+                    </h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Home</a></li>
+                        <li><a href="index.html#quem-somos"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Quem somos</a></li>
+                        <li><a href="produtos.html"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Produtos</a></li>
+                        <li><a href="#contato"
+                                class="text-slate-300 hover:text-white transition flex items-center gap-2"><i
+                                    class="fa-solid fa-chevron-right text-xs text-blue-400"></i> Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="lg:col-span-2">
+                    <h4 class="text-sm font-bold font-heading uppercase text-blue-300 mb-6 tracking-wider">NOSSOS
+                        CONTATOS</h4>
+
+                    <div class="grid sm:grid-cols-2 gap-6 text-sm text-slate-300 mb-6">
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-location-dot text-trefGreen text-lg shrink-0 mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Matriz:</strong>
+                                Rua José Jailton dos Santos, 10 Morada do Sol – Anhembi – SP CEP: 18633-046<br>
+                                <span class="text-white font-semibold">Telefone:</span> (14) 3151-0125
+                            </div>
+                        </div>
+
+                        <div class="flex gap-3">
+                            <i class="fa-solid fa-location-dot text-trefGreen text-lg shrink-0 mt-1"></i>
+                            <div>
+                                <strong class="text-white block mb-1">Filial:</strong>
+                                Av. Santa Teresinha, 241 Vila Santa Cecília – Mauá – SP CEP: 09380-060<br>
+                                <span class="text-white font-semibold">Telefone:</span> (11) 4544-7213
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="border-t border-blue-900/60 pt-6 flex flex-wrap gap-6 text-sm">
+                        <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20gostaria%20de%20maiores%20informações"
+                            target="_blank" class="flex items-center gap-2 text-white hover:text-trefGreen transition">
+                            <i class="fa-brands fa-whatsapp text-trefGreen text-lg"></i> (11) 95882-0100
+                        </a>
+                        <a href="mailto:contato@atecmetais.com.br"
+                            class="flex items-center gap-2 text-white hover:text-blue-300 transition">
+                            <i class="fa-solid fa-envelope text-blue-400 text-lg"></i> contato@atecmetais.com.br
+                        </a>
+                    </div>
+
+                    <div class="mt-6 flex gap-4 text-xs text-slate-400">
+                        <a href="#" class="hover:underline">Política Ambiental</a>
+                        <span>|</span>
+                        <a href="#" class="hover:underline">Política da Qualidade</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <div
+                class="border-t border-blue-900/80 pt-8 text-center text-xs text-slate-400 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <p>Copyright 2026 Todos os direitos reservados – TREFINOX</p>
+                <p class="text-slate-500">Desenvolvido com excelência técnica para TREFINOX</p>
+            </div>
+
+        </div>
+    </footer>
+
+    <a href="https://api.whatsapp.com/send?phone=5511958820100&text=Oi,%20vim%20do%20site%20da%20TREFINOX,%20e%20gostaria%20de%20maiores%20informações..."
+        target="_blank" aria-label="Falar pelo WhatsApp"
+        class="fixed bottom-6 right-6 bg-green-500 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-2xl hover:bg-green-600 transition duration-300 z-50 text-3xl">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="static/js/main.js"></script>
+    <script src="static/js/produtos.js"></script>
+</body>
+
+</html>
